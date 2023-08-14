@@ -19,7 +19,7 @@ export function Breakpoint() {
   // will show the breakpoint name
   return (
     <div className="uswds-devtools-breakpoints">
-      🇺🇸 Active breakpoints:
+      🇺🇸 Active utility breakpoints:
       {breakpoints.map((breakpoint) => (
         <div
           key={breakpoint}
