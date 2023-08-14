@@ -1,0 +1,21 @@
+{
+  "name": "uswds-dev-extension",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild src/background.js src/injected-script.jsx --jsx=automatic --bundle --minify --outdir=dist",
+    "watch": "npm run build -- --watch"
+  },
+  "author": "Sawyer Hollenshead",
+  "dependencies": {
+    "@uswds/uswds": "^3.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "chrome-types": "^0.1.222",
+    "esbuild": "^0.19.1",
+    "typescript": "^5.1.6"
+  }
+}

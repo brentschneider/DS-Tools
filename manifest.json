@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "USWDS DevTools",
+  "description": "U.S. Web Design System developer tools",
+  "version": "1.0",
+  "action": {
+    "default_icon": {
+      "80": "assets/icon-80.png"
+    }
+  },
+  "icons": {
+    "96": "assets/icon-96.png"
+  },
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "permissions": ["activeTab", "scripting"]
+}
