@@ -184,28 +184,33 @@ const componentMap: {
   },
 };
 
+function isHidden(el: HTMLElement) {
+  // Recursively check if this element or any parent is hidden
+  const styles = window.getComputedStyle(el);
+  if (styles.display === "none" || styles.visibility === "hidden") {
+    return true;
+  }
+
+  if (el.parentElement) {
+    return isHidden(el.parentElement);
+  }
+}
+
 /**
  * Scrapes the DOM for each component. If it finds a class, it places a label
  */
 export function ComponentTags() {
   const [foundComponents, setFoundComponents] = useState<FoundComponent[]>([]);
   const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
-  const [pageUrl, setPageUrl] = useState<string>(window.location.href);
 
   const handleResize = () => {
     setScreenWidth(window.innerWidth);
   };
 
-  const handleUrlChange = () => {
-    setPageUrl(window.location.href);
-  };
-
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    window.addEventListener("popstate", handleUrlChange);
     return () => {
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("popstate", handleUrlChange);
     };
   }, []);
 
@@ -217,12 +222,9 @@ export function ComponentTags() {
 
     componentSelectors.forEach((selector) => {
       const elements = document.querySelectorAll(selector);
-      console.log(`Found ${elements.length} ${selector} elements`);
 
       Array.from(elements).forEach((element) => {
-        // Skip if the element is hidden
-        const styles = window.getComputedStyle(element);
-        if (styles.display === "none") {
+        if (isHidden(element as HTMLElement)) {
           return;
         }
 
@@ -235,7 +237,6 @@ export function ComponentTags() {
           url: componentMap[selector].url,
           top,
           left,
-          position: styles.position === "fixed" ? "fixed" : undefined,
         });
       });
 
@@ -255,7 +256,7 @@ export function ComponentTags() {
 
       setFoundComponents(newFoundComponents);
     });
-  }, [screenWidth, pageUrl]);
+  }, [screenWidth]);
 
   return (
     <div className="uswds-devtools-component-labels">
@@ -269,11 +270,10 @@ export function ComponentTags() {
             position: foundComponent.position ?? "absolute",
           }}
         >
-          🇺🇸
           <a href={foundComponent.url} target="_blank">
             {foundComponent.label}
           </a>
-          🇺🇸
+          <span className="uswds-devtools-component-label__flag">🇺🇸</span>
         </div>
       ))}
     </div>

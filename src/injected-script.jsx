@@ -6,6 +6,12 @@ import { App } from "./App";
 console.log("🤖 USWDS DevTools is running");
 
 const rootId = "uswds-devtools-root";
+render();
+
+// Single-page apps don't always trigger a page reload, so we need to
+// periodically check if the URL has changed.
+let currentUrl = window.location.href;
+setInterval(checkUrlChange, 1000);
 
 function render() {
   // Clear the existing HTML content
@@ -23,4 +29,9 @@ function render() {
   root.render(<App />);
 }
 
-render();
+function checkUrlChange() {
+  if (window.location.href !== currentUrl) {
+    currentUrl = window.location.href;
+    render();
+  }
+}
