@@ -12,6 +12,10 @@
     "Helvetica Neue", Arial, sans-serif;
 }
 
+.uswds-devtools-breakpoints a {
+  color: #fff !important;
+}
+
 .uswds-devtools-breakpoint {
   margin-left: 2px;
   padding: 2px;

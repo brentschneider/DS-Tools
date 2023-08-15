@@ -1,11 +1,11 @@
-import { Breakpoint } from "./components/Breakpoint";
-import { Labeller } from "./components/Labeller";
+import { ActiveBreakpoints } from "./components/ActiveBreakpoints";
+import { ComponentTags } from "./components/ComponentTags";
 
 export function App() {
   return (
     <div className="uswds-devtools">
-      <Breakpoint />
-      <Labeller />
+      <ComponentTags />
+      <ActiveBreakpoints />
     </div>
   );
 }

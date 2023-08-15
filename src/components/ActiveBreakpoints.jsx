@@ -14,12 +14,19 @@ const breakpoints = [
 /**
  * Show the active breakpoint
  */
-export function Breakpoint() {
+export function ActiveBreakpoints() {
   // Use the `display` utility class, which if enabled and the breakpoint is active,
   // will show the breakpoint name
   return (
     <div className="uswds-devtools-breakpoints">
-      🇺🇸 Active utility breakpoints:
+      🇺🇸 Active{" "}
+      <a
+        href="https://designsystem.digital.gov/utilities/display/#responsive-variants-2"
+        target="_blank"
+      >
+        utility breakpoints
+      </a>
+      :
       {breakpoints.map((breakpoint) => (
         <div
           key={breakpoint}
