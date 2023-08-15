@@ -3,6 +3,7 @@ npm run build
 rm -rf bundle.zip
 mkdir .bundle
 cp -R dist/. .bundle/dist
+cp -R src/. .bundle/src
 cp -R assets/. .bundle/assets
 cp manifest.json .bundle
 
