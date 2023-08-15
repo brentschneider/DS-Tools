@@ -247,7 +247,7 @@ export function ComponentTags() {
       newFoundComponents.forEach((component, index) => {
         if (
           index > 0 &&
-          component.top === newFoundComponents[index - 1].top &&
+          component.top - newFoundComponents[index - 1].top < 10 &&
           component.left - newFoundComponents[index - 1].left < 100
         ) {
           component.top += 30;

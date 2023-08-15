@@ -1,11 +1,11 @@
 {
   "manifest_version": 3,
-  "name": "USWDS DevTools",
-  "description": "U.S. Web Design System developer tools",
-  "version": "1.0",
+  "name": "DevTools: U.S. Web Design System (USWDS)",
+  "description": "View which USWDS components are being used on a page and the active responsive breakpoints.",
+  "version": "1.0.0",
   "action": {
     "default_icon": {
-      "80": "assets/icon-80.png"
+      "96": "assets/icon-96.png"
     }
   },
   "icons": {

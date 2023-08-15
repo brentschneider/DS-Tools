@@ -2,8 +2,9 @@
   "name": "uswds-dev-extension",
   "version": "1.0.0",
   "scripts": {
-    "build": "esbuild src/background.js src/injected-script.jsx --jsx=automatic --bundle --minify --outdir=dist",
-    "watch": "npm run build -- --watch"
+    "build": "esbuild src/background.js src/injected-script.jsx --jsx=automatic --bundle --minify --outdir=dist --target=es2020",
+    "watch": "npm run build -- --watch",
+    "bundle": "./scripts/bundle.sh"
   },
   "author": "Sawyer Hollenshead",
   "dependencies": {
