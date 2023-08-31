@@ -1,14 +1,10 @@
 // $theme-utility-breakpoints
 const breakpoints = [
-  "card",
-  "card-lg",
-  "mobile",
-  "mobile-lg",
-  "tablet",
-  "tablet-lg",
-  "desktop",
-  "desktop-lg",
-  "widescreen",
+  "XS min-width (0px)",
+  "SM min-width (544px)",
+  "MD min-width (768px)",
+  "LG min-width (1024px)",
+  "XL min-width (1280px)",
 ];
 
 /**
@@ -19,9 +15,21 @@ export function ActiveBreakpoints() {
   // will show the breakpoint name
   return (
     <div className="uswds-devtools-breakpoints">
+      <div className="uswds-devtools-breakpoints-toc">
+        <h4>Key</h4>
+        <p>
+          🌚 component types <br />
+          🟢 Containor class <br />
+          🔵 Row class <br />
+          🟣 Lists<br />
+          🧠 Fa & glyph icon<br />
+        </p>
+
+
+      </div>
       🇺🇸 Active{" "}
       <a
-        href="https://designsystem.digital.gov/utilities/display/#responsive-variants-2"
+        href="https://design.cms.gov/foundation/layout-grid/responsive-design/?query=ds-h3&theme=core"
         target="_blank"
       >
         utility breakpoints

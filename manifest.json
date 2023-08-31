@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DevTools: U.S. Web Design System (USWDS)",
-  "description": "View which USWDS components are being used on a page and the active responsive breakpoints.",
+  "description": "View which Design System Components are being used on a page and view some invisible sections using css styles",
   "version": "1.0.1",
   "action": {
     "default_icon": {
