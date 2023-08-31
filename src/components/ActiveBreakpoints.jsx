@@ -22,10 +22,8 @@ export function ActiveBreakpoints() {
           🟢 Containor class <br />
           🔵 Row class <br />
           🟣 Lists<br />
-          🧠 Fa & glyph icon<br />
+          🧠 Fa & Glyph icon<br />
         </p>
-
-
       </div>
       🇺🇸 Active{" "}
       <a

@@ -1,6 +1,8 @@
 # DevTools: U.S. Web Design System (USWDS)
 
-View which USWDS components are being used on a page and the active responsive breakpoints.
+View which CMS DS components are being used on a page and the active responsive breakpoints.
+
+This plugin highlights components in the DS, and using CSS shows the colums and rows specified in product.
 
 ## Contributing
 
