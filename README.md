@@ -23,4 +23,10 @@ Enable "Developer mode" by toggling the switch on the top right corner of the pa
 Click on "Load unpacked" button, select the folder containing your unpacked extension, and click on "Select Folder."
 
 
-### Example of plugin evaluating [design.cmd.gov](design.cmd.gov)
+### Example of browser plugin reviewing [design.cmd.gov](design.cmd.gov)
+
+
+
+*Example of the browser plugin results*
+
+![Example of the browser plugin results](DS-tool-sample.png?raw=true "Example of the browser plugin results")
